@@ -16,7 +16,6 @@ geth --datadir eth-data --networkid 15  --port 30303 --nodiscover console 2>cons
 bootnode --genkey=boot.key  \
 bootnode --nodekey=boot.key \
 
-
 geth --datadir eth-data --networkid 1234 --rpc --rpcport 8545 --rpcapi "db, net, web3, personal" --rpccorsdomain "" --rpcaddr "0.0.0.0" console
 
 geth --rpc --rpccorsdomain "https://remix.ethereum.org"  --datadir eth-data  --networkid 12345 
@@ -28,24 +27,17 @@ geth/static-nodes.json
   "enode://pubkey@ip:port"
 ]
 
-
-
 geth --identity “LocalTestNode” --rpc --rpcport 8080 --rpccorsdomain “*” --datadir eth-data/data/  --nodiscover --rpcapi db,eth,net,web3,personal --networkid 15 --maxpeers 0 --verbosity 6 init genesis.1.json
 
 geth --identity “LocalTestNode” --rpc  --rpccorsdomain "*" --datadir eth-data/data/  --nodiscover --rpcapi db,eth,net,web3,personal --networkid 1999 --maxpeers 0 console
 
-
 https://github.com/ethereum/go-ethereum/wiki/Connecting-to-the-network
-
 
 https://github.com/ethereum/go-ethereum/wiki/Setting-up-private-network-or-local-cluster
 
 https://github.com/ethereum/go-ethereum/wiki/Private-network
 
 geth --rpc --rpccorsdomain "*" --rpcapi="db,eth,net,web3,personal,web3"  --datadir eth-data  --networkid 15 --nodiscover  --unlock 0 --mine 1
-
-
-
 
 geth --identity “LocalTestNode” --rpc  --rpccorsdomain “*” --datadir eth-data/  --nodiscover --rpcapi db,eth,net,web3,personal --networkid 15 --maxpeers 0 --verbosity 6 init genesis.1.json
 
