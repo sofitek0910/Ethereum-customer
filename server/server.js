@@ -8,8 +8,6 @@ const { parsed: config } = dotenv.config();
 // deploy contract
 
 
-
-
 const apiRoutes = require('./routes');
 var User = require('./DB/models/user');
 var jwt = require('jsonwebtoken');
